@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Translation App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Translation App</h1>
+    <form action="/translate" method="post">
+        <label for="text">Text:</label>
+        <textarea id="text" name="text"></textarea>
+        <br>
+        <label for="target_language">Target Language:</label>
+        <select id="target_language" name="target_language">
+            <option value="ar">Arabic</option>
+            <option value="tr">Turkish</option>
+            <option value="uk">Ukrainian</option>
+        </select>
+        <br>
+        <input type="submit" value="Translate">
+    </form>
+    <div id="translation"></div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
